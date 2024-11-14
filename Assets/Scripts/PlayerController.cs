@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour
     public Rigidbody p_Rigidbody;
     public float moveSpeed = 3.0f;
     public float maxForce = 1.0f;
-    public float lookRotationSpeed = 10f;
     public float movementThreshold = 0.1f;
     private Vector2 move;
-    private Vector3 lastMovementDirection;
+
+    //PLAYER LOOK
+    private Vector2 look;
+    public float rotationSpeed = 10f;
 
     //PLAYER JUMP
     public float jumpForce = 3.0f;
@@ -39,10 +41,16 @@ public class PlayerController : MonoBehaviour
         }
     }  // FUNCTIONAL
 
+    public void OnLook(InputAction.CallbackContext context)
+    {
+        look = context.ReadValue<Vector2>();
+    }
+
     void FixedUpdate()
     {
         IsGrounded();
         PlayerMovement();
+        PlayerRotation();
     }  //FUNCTIONAL
 
     void PlayerJump()
@@ -52,25 +60,32 @@ public class PlayerController : MonoBehaviour
 
     void PlayerMovement()
     {
-        //CALCULATES TARGET VELOCITY
-        Vector3 targetVelocity = new Vector3(move.x, 0f, move.y).normalized * moveSpeed;
+        // Obtiene la dirección de movimiento relativa a la rotación del personaje
+        Vector3 forward = transform.forward * move.y;
+        Vector3 right = transform.right * move.x;
+        Vector3 moveDirection = (forward + right).normalized;
 
-        //CALCULATES THE VELOCITY CHANGE
+        // Calcula la velocidad objetivo usando la dirección relativa
+        Vector3 targetVelocity = moveDirection * moveSpeed;
+
+        // Calcula el cambio de velocidad
         Vector3 velocityChange = (targetVelocity - p_Rigidbody.linearVelocity);
-        velocityChange.y = 0f; //MAKES GRAVITY WORK XD 
+        velocityChange.y = 0f; // Mantiene la gravedad funcionando
 
-        //APPLY FORCE
+        // Aplica la fuerza
         velocityChange = Vector3.ClampMagnitude(velocityChange, maxForce);
         p_Rigidbody.AddForce(velocityChange, ForceMode.VelocityChange);
+    } //FUNCTIONAL
 
-        //HANDLE ROTATION RESPECT ITS MOVEMENT
-        if (move.magnitude > movementThreshold)
+    void PlayerRotation()
+    {
+        if (look.magnitude >= 0.1f)
         {
-            lastMovementDirection = new Vector3(move.x, 0f, move.y).normalized;
-            Quaternion targetRotation = Quaternion.LookRotation(lastMovementDirection);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookRotationSpeed * Time.fixedDeltaTime);
+            float targetAngle = Mathf.Atan2(look.x, look.y) * Mathf.Rad2Deg;
+            Quaternion targetRotation = Quaternion.Euler(0f, targetAngle, 0f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.fixedDeltaTime * rotationSpeed);
         }
-    }  //FUNCTIONAL
+    }
 
     void IsGrounded()
     {
