@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     public float maxForce = 1.0f;
     public float movementThreshold = 0.1f;
     private Vector2 move;
-    private Vector3 lastMoveDirection; // Nueva variable para recordar la última dirección
+    [HideInInspector]
+    public Vector3 lastMoveDirection; // Nueva variable para recordar la última dirección
 
     [Header("Player look")]
     public float rotationSpeed = 10f;
