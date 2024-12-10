@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7716964355282510816}
   - component: {fileID: 7799914169195148030}
   - component: {fileID: 6884411464719763442}
+  - component: {fileID: 2395266994095144919}
   m_Layer: 0
   m_Name: Light Object
   m_TagString: Untagged
@@ -151,3 +152,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 0
   throwForce: 10
+--- !u!114 &2395266994095144919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221040654072574086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0a2f5d8b1140044a5cf0b35bb0d9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10

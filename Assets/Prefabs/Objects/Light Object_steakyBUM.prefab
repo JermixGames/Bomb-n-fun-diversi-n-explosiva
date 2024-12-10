@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8856426276663098740}
   - component: {fileID: 8891577320857656979}
   - component: {fileID: 1059910420746885526}
+  - component: {fileID: -1120846931273669459}
   m_Layer: 0
   m_Name: Light Object_steakyBUM
   m_TagString: Untagged
@@ -182,3 +183,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75a9ec181cbb1d540a2267d274ddf817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1120846931273669459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8889171103451135350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0a2f5d8b1140044a5cf0b35bb0d9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10

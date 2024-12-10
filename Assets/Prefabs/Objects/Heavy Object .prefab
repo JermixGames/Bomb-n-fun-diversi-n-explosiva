@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4573045222239572000}
   - component: {fileID: 4545692749471007350}
   - component: {fileID: 4356926226464578799}
+  - component: {fileID: -4100626973029887122}
   m_Layer: 0
   m_Name: 'Heavy Object '
   m_TagString: Untagged
@@ -151,3 +152,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weight: 2
   throwForce: 30
+--- !u!114 &-4100626973029887122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191679138940770120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0a2f5d8b1140044a5cf0b35bb0d9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10

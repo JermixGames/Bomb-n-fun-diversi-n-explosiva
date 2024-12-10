@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3292458045665368654}
   - component: {fileID: 2712459282701350260}
   - component: {fileID: 703434499982930479}
+  - component: {fileID: -1695227738607048824}
   m_Layer: 0
   m_Name: Medium Object_boing
   m_TagString: Untagged
@@ -165,3 +166,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceForce: 2
+--- !u!114 &-1695227738607048824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316893934068100462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d0a2f5d8b1140044a5cf0b35bb0d9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 10

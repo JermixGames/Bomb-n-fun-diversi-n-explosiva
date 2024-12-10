@@ -14,6 +14,15 @@ public class ObjectSpawner : MonoBehaviour
     public float spawnInterval = 10f;
     public int objectsPerSpawn = 5;
 
+    // Ajustes adicionales para el spawn
+    [Header("Physics & Spawn Tweaks")]
+    [Tooltip("Distancia aleatoria mï¿½xima alrededor del punto de spawn para evitar superposiciï¿½n")]
+    public float spawnRadius = 0.5f;
+    [Tooltip("Capa en la que se colocarï¿½n los objetos spawneados (opcional)")]
+    public LayerMask spawnLayer;
+    [Tooltip("Aplicar Constraints u otras propiedades al Rigidbody tras spawn")]
+    public bool applyPhysicsConstraints = true;
+
     private void Start()
     {
         if (spawnPoints == null || spawnPoints.Count == 0)
@@ -44,14 +53,37 @@ public class ObjectSpawner : MonoBehaviour
     {
         for (int i = 0; i < objectsPerSpawn; i++)
         {
-            // Seleccionar un punto de spawn aleatorio
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Count)];
+            GameObject prefab = objectPrefabs[Random.Range(0, objectPrefabs.Count)];
 
-            // Seleccionar un prefab de objeto aleatorio
-            GameObject objectToSpawn = objectPrefabs[Random.Range(0, objectPrefabs.Count)];
+            // Aplicar un offset aleatorio a la posiciï¿½n para evitar que todos nazcan en el mismo punto exacto
+            Vector3 randomOffset = new Vector3(
+                Random.Range(-spawnRadius, spawnRadius),
+                Random.Range(0f, spawnRadius),
+                Random.Range(-spawnRadius, spawnRadius)
+            );
 
-            // Instanciar el objeto en la posición y rotación del punto de spawn
-            Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+            Vector3 spawnPosition = spawnPoint.position + randomOffset;
+
+            GameObject spawnedObject = Instantiate(prefab, spawnPosition, spawnPoint.rotation);
+
+            // Opcional: Asignar la capa a la que pertenecen estos objetos para controlar colisiones
+            spawnedObject.layer = LayerMask.NameToLayer(LayerMask.LayerToName(spawnLayer.value));
+
+            // Si el objeto tiene un Rigidbody, ajustamos algunas propiedades para evitar comportamientos extraï¿½os
+            Rigidbody rb = spawnedObject.GetComponent<Rigidbody>();
+            if (rb != null && applyPhysicsConstraints)
+            {
+                // Por ejemplo, bloqueamos la rotaciï¿½n en Z y X para que no se desequilibre
+                rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
+
+                // Ajustar drag y angularDrag para reducir la tendencia a volverse incontrolable
+                rb.linearDamping = 0.5f;
+                rb.angularDamping = 0.5f;
+
+                // Opcional: Reducir masa si es muy alta
+                rb.mass = 1f;
+            }
         }
     }
 }
