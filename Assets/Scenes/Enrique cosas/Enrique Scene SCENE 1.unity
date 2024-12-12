@@ -186,6 +186,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7411038883489058920, guid: 4c661aaffb6ddd74bb7b970891bfdebb, type: 3}
   m_PrefabInstance: {fileID: 851028226}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &91159236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 91159237}
+  m_Layer: 0
+  m_Name: PowerUpSpawnPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &91159237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91159236}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -120.8, y: -36.04, z: 33.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 891864110}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &106348265 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6903551334602606873, guid: 92a660d4b97b74f47b042d8410e7ef20, type: 3}
@@ -949,6 +980,10 @@ PrefabInstance:
       propertyPath: 'spawnPoints.Array.data[1]'
       value: 
       objectReference: {fileID: 1442610661}
+    - target: {fileID: 4383859056711495116, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 188
+      objectReference: {fileID: 0}
     - target: {fileID: 5413831474843219069, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
       propertyPath: moveSpeed
       value: 5
@@ -997,6 +1032,10 @@ PrefabInstance:
       propertyPath: powerUpText
       value: 
       objectReference: {fileID: 442289582}
+    - target: {fileID: 7977443664881944163, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
+      propertyPath: m_Name
+      value: Text (TMP)2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1627,6 +1666,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f27ae2cb67b756847809deb3529f2639, type: 3}
+--- !u!1 &834920496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834920497}
+  m_Layer: 0
+  m_Name: PowerUpSpawnPoint (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &834920497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834920496}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.58, y: -36.04, z: 131.17}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 891864110}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &851028226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1810,6 +1880,9 @@ Transform:
   - {fileID: 223576555}
   - {fileID: 1257007077}
   - {fileID: 962622408}
+  - {fileID: 91159237}
+  - {fileID: 1368536575}
+  - {fileID: 834920497}
   - {fileID: 293127478}
   - {fileID: 1665771450}
   - {fileID: 1442610661}
@@ -2030,7 +2103,7 @@ Transform:
   m_GameObject: {fileID: 962622407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.07, y: -36.04, z: -3.08}
+  m_LocalPosition: {x: 95.9, y: -36.04, z: -88.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2322,8 +2395,8 @@ Transform:
   m_GameObject: {fileID: 1163703677}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.338, y: 65.4, z: -7.9}
-  m_LocalScale: {x: 4.7124, y: 4.7124, z: 4.7124}
+  m_LocalPosition: {x: -239.59, y: 141.14, z: -7.9}
+  m_LocalScale: {x: 18.041895, y: 18.041895, z: 18.041895}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2700,6 +2773,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1079958450}
   m_SourcePrefab: {fileID: 100100000, guid: c3d45dedf3da279409d87e674038b4cf, type: 3}
+--- !u!1 &1368536574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1368536575}
+  m_Layer: 0
+  m_Name: PowerUpSpawnPoint (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1368536575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368536574}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -47.7, y: -36.04, z: -121.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 891864110}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1389479619 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8573681413511221839, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
@@ -3882,8 +3986,8 @@ Transform:
   m_GameObject: {fileID: 1712609924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.338, y: 16.56, z: -7.9}
-  m_LocalScale: {x: 4.7124, y: 4.7124, z: 4.7124}
+  m_LocalPosition: {x: -239.59, y: -45.85, z: -7.9}
+  m_LocalScale: {x: 18.041895, y: 18.041895, z: 18.041895}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4558,7 +4662,7 @@ PrefabInstance:
       objectReference: {fileID: 282245697}
     - target: {fileID: 4383859056711495116, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 189
+      value: -188
       objectReference: {fileID: 0}
     - target: {fileID: 5413831474843219069, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
       propertyPath: moveSpeed
@@ -4608,6 +4712,10 @@ PrefabInstance:
       propertyPath: powerUpText
       value: 
       objectReference: {fileID: 1389479619}
+    - target: {fileID: 7977443664881944163, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
+      propertyPath: m_Name
+      value: Text (TMP)1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
