@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 5413831474843219069}
   - component: {fileID: 8090283892412806936}
   - component: {fileID: 7851349513089996962}
+  - component: {fileID: 4300114497100562293}
+  - component: {fileID: 4954623940708049451}
   - component: {fileID: 3678851500724232874}
   m_Layer: 0
   m_Name: Player Prefab
@@ -196,6 +198,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpText: {fileID: 0}
+--- !u!114 &4300114497100562293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392853871347168008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8fa0a7895390142920e4f1b3015250, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLives: 3
+  spawnPoints: []
+  onPlayerDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4954623940708049451}
+        m_TargetAssemblyTypeName: TemporaryInvincibility, Assembly-CSharp
+        m_MethodName: ActivateInvincibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onGameOver:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4954623940708049451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392853871347168008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adff00d7fbe15144883c3466319fbeb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibilityDuration: 2
+  flashMaterial: {fileID: 2100000, guid: 83fe18c981558cf4aa7e8d2ebea38527, type: 2}
 --- !u!114 &3678851500724232874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,7 +374,7 @@ MonoBehaviour:
     m_ActionId: 224fd6ec-1c07-405b-a445-edb6656b6c5b
     m_ActionName: 'Player/PowerUp[/Keyboard/q]'
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
