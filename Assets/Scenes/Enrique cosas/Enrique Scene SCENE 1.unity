@@ -931,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3678851500724232874, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Keyboard&Mouse
+      value: Gamepad
       objectReference: {fileID: 0}
     - target: {fileID: 3678851500724232874, guid: 7773c3d5cd5c19f4cbd3998f1321c979, type: 3}
       propertyPath: m_NeverAutoSwitchControlSchemes
@@ -1888,11 +1888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4437524579559034434, guid: f27ae2cb67b756847809deb3529f2639, type: 3}
       propertyPath: spawnRadius
-      value: 2
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4437524579559034434, guid: f27ae2cb67b756847809deb3529f2639, type: 3}
       propertyPath: spawnInterval
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4437524579559034434, guid: f27ae2cb67b756847809deb3529f2639, type: 3}
       propertyPath: objectsPerSpawn
@@ -1900,7 +1900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4437524579559034434, guid: f27ae2cb67b756847809deb3529f2639, type: 3}
       propertyPath: spawnPoints.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4437524579559034434, guid: f27ae2cb67b756847809deb3529f2639, type: 3}
       propertyPath: applyPhysicsConstraints
@@ -2030,7 +2030,7 @@ Transform:
   m_GameObject: {fileID: 962622407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: -15.52, z: 0.16}
+  m_LocalPosition: {x: 1.07, y: -36.04, z: -3.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2275,6 +2275,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02, y: 0.02, z: 0.020000022}
   m_Center: {x: -0.0000000037252903, y: 0, z: 0}
+--- !u!1 &1163703677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163703679}
+  - component: {fileID: 1163703678}
+  m_Layer: 0
+  m_Name: DeathTrigger (1)
+  m_TagString: DeathTrigger
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1163703678
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163703677}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 115.08986, y: 0, z: 108.52145}
+  m_Center: {x: 13.747953, y: -0.5, z: 0}
+--- !u!4 &1163703679
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163703677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -56.338, y: 65.4, z: -7.9}
+  m_LocalScale: {x: 4.7124, y: 4.7124, z: 4.7124}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208971197
 GameObject:
   m_ObjectHideFlags: 0
@@ -5777,3 +5830,4 @@ SceneRoots:
   - {fileID: 1671711138}
   - {fileID: 1364856361}
   - {fileID: 1712609926}
+  - {fileID: 1163703679}

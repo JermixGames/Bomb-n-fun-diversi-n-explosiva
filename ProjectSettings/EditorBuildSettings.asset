@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Wong/PlayerControllerTest 2 players.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Wong/Main Menu.unity
+    guid: dd3c8baabc41d004fa284470c399b364
+  - enabled: 1
+    path: Assets/Scenes/Enrique cosas/Enrique Scene SCENE 1.unity
+    guid: febe9db6a86a62842b5626bc2fed931c
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
